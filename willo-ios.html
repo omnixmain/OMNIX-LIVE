@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OMNIX LIVE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- JW Player Library -->
+  <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #fff;
+      font-family: Inter, system-ui, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .player-container {
+      width: 100%;
+      position: relative;
+    }
+
+    .player-wrap {
+      width: 100%;
+      aspect-ratio: 16/9;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #my-jwplayer {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .ad-container {
+      width: 100%;
+      overflow: hidden;
+      margin: 5px 0;
+    }
+
+    .ad-box {
+      background: #111;
+      color: #fff;
+      padding: 8px;
+      border-radius: 8px;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .ad-box {
+        min-height: 50px;
+      }
+    }
+  </style>
+</head>
+
+<script type="text/javascript" src="https://troopinvariably.com/37/d7/1a/37d71a290dde379f3d1016fe3009fb4b.js"></script>
+
+<body>
+
+  <div class="main-container">
+
+    <!-- Top Ad -->
+    <div class="ad-container">
+      <div class="ad-box">
+        <script type="text/javascript">
+          atOptions = {
+            'key': 'db78e49a3c97dc3562c3b48559ea4a28',
+            'format': 'iframe',
+            'height': 50,
+            'width': 320,
+            'params': {}
+          };
+        </script>
+        <script type="text/javascript" src="//troopinvariably.com/db78e49a3c97dc3562c3b48559ea4a28/invoke.js"></script>
+      </div>
+    </div>
+
+    <!-- Player -->
+    <div class="player-container">
+      <div class="player-wrap">
+        <div id="my-jwplayer"></div>
+      </div>
+    </div>
+
+    <!-- Bottom Ad -->
+    <div class="ad-container">
+      <div class="ad-box">
+        <script type="text/javascript">
+          atOptions = {
+            'key': 'db78e49a3c97dc3562c3b48559ea4a28',
+            'format': 'iframe',
+            'height': 50,
+            'width': 320,
+            'params': {}
+          };
+        </script>
+        <script type="text/javascript" src="//troopinvariably.com/db78e49a3c97dc3562c3b48559ea4a28/invoke.js"></script>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    (function () {
+
+      const urlParams = new URLSearchParams(window.location.search);
+      let streamUrl = urlParams.get('url');
+
+      // DEFAULT STREAM URL IF NO PARAM FOUND
+      if (!streamUrl) {
+        streamUrl = "https://aps33.playlist.live-video.net/v1/playlist/CrsF36aeETfywbe3ZHAIplh9E0Z9_gtmQuXQdElPE34X06098qb6XAUooawS6LHWuheyhwKMj2whPwNlc_hGMi--0IT36Bh9Uuxs3K42RRRiaVJvBPyGtNQON_QdWIy0idECxoxWbNcd2qUrMWeBHDTuLNPT0HYHKT1XYkDd-3Fo0FRvt40aviCI9g2BCw3G4t4S3A5JnkLdyPb6eQUWKUBQWB78QUm_MjyCCWwrdUxYvRQmOgwtP9fLx-rEc-P4yW_U9il-qEjmQ1fYoPxOI0bcWE1wbcveVgiNdB-pHFN0-ZTHeVRaVTOnXCvJWsp0jUBBN2Ri9PJI_-JEJW3st-3f1uVhCL_y8k8Sr3PlqSxrXwl_eSZvkUpDTqF7EkBxCgiDGEdh3suapUcv4HoQJZeLuHYC07lCJh2IecusVG4kLnq1jppxVZIg_EDkCuu7KQunndKUS926OVSW1vCZSSI40l6onPic8k9fgZsiBKgpb00nMV5sbSLjcCGzZVnsgnALW7L1irm9XD-evk4brYGt3XepxiclOwiioTfMfY4W9CE-5-Gh_OEKVilsyZ7FcuuK8pdZgDngogs6HbW7qqtGswnge60TS321AkQT7ei9MPZ1xR833ynACwQKU_Iit3XwFzXGxqu2BjTiMvh3UlK_9_JHFUIWLha_J1-Q0CNEERaSVENs99KCswJo96dx8qIRpGE8ebyRoz9kj0mBHPEE3_XjaPRrNyfBLEGTQ4KXkJQg8KcP7MaBHNblETw1Lb2C_ZB5zNR-SXcTwcPLxISKCtSb15qGAAgW7Chdyn5HzEhrgg35KVBAyLdR0tfXSVYcnH6DkFRffyce9ZuyslcAxQ7yGhjqenFwVNaE8t3EOLiKe65p462CvubqCO1IjoY5Ms409BJZOICtweoKGX66No6XsdNbP9rmXBvVGgxUkBHljLjJ64SHwbQgASoJdXMtd2VzdC0yMIQO.m3u8";
+      }
+
+      // FIX URL FORMAT
+      streamUrl = decodeURIComponent(streamUrl);
+      streamUrl = streamUrl.replace(/\\\//g, "/");
+      streamUrl = streamUrl.replace(/\\\\/g, "");
+
+      jwplayer("my-jwplayer").setup({
+        file: streamUrl,
+        type: "hls",
+        width: "100%",
+        aspectratio: "16:9",
+        autostart: true,
+        mute: false,
+        controls: true,
+        preload: "auto",
+        stretching: "uniform",
+        skin: { name: "seven" }
+      });
+
+    })();
+  </script>
+
+</body>
+
+</html>
