@@ -120,12 +120,16 @@ function openPlayer(channel) {
     modal.classList.add('active');
     currentTitle.textContent = channel.name;
 
-    // Check if it's HLS
-    const isHLS = channel.url.includes('.m3u8');
+    // Destroy existing instance if any
+    if (art) {
+        art.destroy(false);
+        art = null;
+    }
 
     art = new Artplayer({
         container: '.artplayer-app',
         url: channel.url,
+        type: 'm3u8', // Force HLS for IPTV lists as most are m3u8
         volume: 0.5,
         isLive: true,
         autoplay: true,
@@ -155,6 +159,14 @@ function openPlayer(channel) {
                     hls.attachMedia(video);
                     art.hls = hls;
                     art.on('destroy', () => hls.destroy());
+
+                    // Handle HLS Errors
+                    hls.on(Hls.Events.ERROR, function (event, data) {
+                        if (data.fatal) {
+                            console.error('HLS Error:', data);
+                            art.notice.show = 'Playback Error: ' + data.details;
+                        }
+                    });
                 } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                     video.src = url;
                 } else {
@@ -162,6 +174,11 @@ function openPlayer(channel) {
                 }
             }
         },
+    });
+
+    art.on('error', function (error) {
+        console.error('Artplayer Error:', error);
+        art.notice.show = 'Error: Video cannot be played. (CORS/Mixed Content)';
     });
 }
 
