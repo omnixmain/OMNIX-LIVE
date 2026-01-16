@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OMNIX LIVE</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.css" />
-    <style>
-        body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   OMNIX LIVE
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.css" rel="stylesheet"/>
+  <style>
+   body {
             background-color: #000;
             margin: 0;
             padding: 0;
@@ -29,17 +30,17 @@
         .plyr {
             height: 100%;
         }
-    </style>
-</head>
-<script type='text/javascript' src='//checkupoceandip.com/09/f1/e9/09f1e956c711aea6a898d5abbb78d092.js'></script>
-
-<body>
-    <video id="player" autoplay muted controls crossorigin playsinline></video>
-
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+  </style>
+ </head>
+ <body>
+  <video autoplay="" controls="" crossorigin="" id="player" muted="" playsinline="">
+  </video>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js">
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
             const source = "https://golu.allinonereborn.fun/hls_cors.php?key=mukesh";
             const video = document.getElementById('player');
 
@@ -85,7 +86,6 @@
                 document.body.innerHTML = '<p style="color:white;text-align:center;margin-top:20%">Your browser does not support HLS playback.</p>';
             }
         });
-    </script>
-</body>
-
+  </script>
+ </body>
 </html>

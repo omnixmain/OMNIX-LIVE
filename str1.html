@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMNIX LIVE</title>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css"
-    crossorigin="anonymous">
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   OMNIX LIVE
+  </title>
+  <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js">
+  </script>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css" rel="stylesheet"/>
   <style>
-    * {
+   * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -115,26 +113,30 @@
       }
     }
   </style>
-</head>
-<script src="https://troopinvariably.com/37/d7/1a/37d71a290dde379f3d1016fe3009fb4b.js"></script>
-
-<body>
-
+ </head>
+ <body>
   <!-- Chrome Only Modal -->
-  <div id="chromeModal" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-content">
-      <h2>Please Open in Chrome</h2>
-      <p>This site is optimized for <strong>Google Chrome</strong>. Please open the link in Chrome browser for the best
-        experience.</p>
-    </div>
+  <div aria-modal="true" class="modal hidden" id="chromeModal" role="dialog">
+   <div class="modal-content">
+    <h2>
+     Please Open in Chrome
+    </h2>
+    <p>
+     This site is optimized for
+     <strong>
+      Google Chrome
+     </strong>
+     . Please open the link in Chrome browser for the best
+        experience.
+    </p>
+   </div>
   </div>
-
-  <div class="shaka-video-container" data-shaka-player>
-    <video autoplay playsinline preload="metadata" poster=""></video>
+  <div class="shaka-video-container" data-shaka-player="">
+   <video autoplay="" playsinline="" poster="" preload="metadata">
+   </video>
   </div>
-
   <script>
-    document.addEventListener('DOMContentLoaded', async () => {
+   document.addEventListener('DOMContentLoaded', async () => {
       /********** Chrome check **********/
       const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
       if (!isChrome) {
@@ -243,6 +245,5 @@
       }
     });
   </script>
-</body>
-
+ </body>
 </html>
