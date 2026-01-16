@@ -126,10 +126,13 @@ function openPlayer(channel) {
         art = null;
     }
 
+    // Use CORS Proxy for the stream URL to fix manifestLoadError
+    const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(channel.url);
+
     art = new Artplayer({
         container: '.artplayer-app',
-        url: channel.url,
-        type: 'm3u8', // Force HLS for IPTV lists as most are m3u8
+        url: proxyUrl, // Routed through proxy
+        type: 'm3u8',
         volume: 0.5,
         isLive: true,
         autoplay: true,
