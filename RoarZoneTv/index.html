@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoarZoneTv - OMNIX EMPIRE</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Artplayer -->
+    <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="ri-tv-2-fill"></i> RoarZoneTv
+        </div>
+        <div class="search-container">
+            <i class="ri-search-line"></i>
+            <input type="text" id="searchInput" placeholder="Search channels...">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Categories (Optional, dynamically filled if needed) -->
+        <div id="category-tags" class="category-scroll">
+            <!-- <button class="tag active">All</button> -->
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading Playlist...</p>
+        </div>
+
+        <div id="channel-grid" class="grid">
+            <!-- Channels will be injected here -->
+        </div>
+    </main>
+
+    <!-- Player Modal -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closePlayer"><i class="ri-close-line"></i></span>
+            <div class="artplayer-app" id="player"></div>
+            <div class="channel-info">
+                <h2 id="current-title">Channel Name</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Powered by OMNIX EMPIRE</h3>
+            <div class="footer-links">
+                <a href="https://t.me/omnix_Empire" target="_blank" class="footer-link">
+                    <i class="ri-telegram-fill"></i> OMNIX EMPIRE
+                </a>
+                <a href="https://omnixmain.github.io/OMNIX-EMPIRE/" target="_blank" class="footer-link">
+                    <i class="ri-global-line"></i> Official Website
+                </a>
+            </div>
+            <p class="copyright">© 2026 RoarZoneTv. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
